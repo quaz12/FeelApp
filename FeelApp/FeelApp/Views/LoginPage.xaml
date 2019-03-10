@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:FeelApp.Custom;assembly=FeelApp"  
+             x:Class="FeelApp.Views.LoginPage"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" BackgroundColor="White"
+                     Padding="30,50,30,30">
+            <Image Source="logo.png"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   Margin="50"/>
+
+        
+
+            <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                   
+                       Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Image BackgroundColor="#EB532A"
+                            Source="iconUsername.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                    <local:CustomEntry 
+                           HorizontalOptions="FillAndExpand"
+                           Placeholder="Email"
+                           Keyboard="Email"
+                           Text="{Binding Email}" />
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"
+                   Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Image BackgroundColor="#EB532A"
+                        Source="iconPassword.png"
+                        Aspect="AspectFit"
+                        HeightRequest="30"
+                        WidthRequest="30"/>
+                    <local:CustomEntry Text="{Binding Password}"
+                        HorizontalOptions="FillAndExpand"
+                       Placeholder="Password"
+                       IsPassword="True"/>
+
+                </StackLayout>
+            </Frame>
+            <Button BackgroundColor="#EB532A"
+                    CornerRadius="10"
+                    TextColor="White"
+                    Text="SIGN IN"
+                     IsVisible="{Binding VisibleButton}"
+                    Command="{Binding SignInCommand}"/>
+
+            <ActivityIndicator IsRunning="True"
+                               Color="#EB532A"
+                               IsVisible="{Binding IsBusy}"/>
+
+            <!--<Label Text="Forgot Password?"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CreateAccountCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>-->
+            <Label Text="Create Account"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CreateAccountCommand}">
+                        
+                    </TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

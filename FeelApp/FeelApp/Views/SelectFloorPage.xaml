@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.SelectFloorPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <StackLayout Orientation="Horizontal"
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Image Source="iconMenu.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowHideMenuCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="SELECT FLOOR"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"                           
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Medium"/>
+                    <Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>
+                </StackLayout>
+
+
+
+            </Frame>
+            <StackLayout Padding="10">
+                <Button Text="First Floor"
+                    BackgroundColor="#EB532A"
+                        TextColor="White"
+              Command="{Binding FirstCommand}"/>
+                <Button Text="Second Floor"
+                        TextColor="White"
+                    BackgroundColor="#EB532A"
+              Command="{Binding SecondCommand}"/>
+                <Button Text="Third Floor"
+                        TextColor="White"
+                    BackgroundColor="#EB532A"
+              Command="{Binding ThirdCommand}"/>
+                <Button Text="Fourth Floor"
+                        TextColor="White"
+                    BackgroundColor="#EB532A"
+              Command="{Binding FourthCommand}"/>
+            </StackLayout>
+      
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

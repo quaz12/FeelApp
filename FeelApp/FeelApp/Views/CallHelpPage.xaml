@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.CallHelpPage"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- App Bar-->
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <Grid
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="iconMenu.png" 
+                           Grid.Column="0"
+                           HeightRequest="20"
+                           WidthRequest="20"
+                            VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="StartAndExpand"         
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowHideMenuCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="CALL FOR HELP"
+                           Grid.Column="1"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"                           
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontSize="Small"/>
+                    <Image Source="iconaInfo.png" 
+                           Grid.Column="2"
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>
+                </Grid>
+
+
+
+            </Frame>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   Padding="30"
+                     Spacing="20">
+                <Frame BackgroundColor="#DBD7D8"
+                  
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   Padding="10"
+                   CornerRadius="150"
+                        IsVisible="{Binding IsUser}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScanCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Image Source="iconFloorPlan.png"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ScanCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                          
+                </Frame>
+                <!--Help-->
+                <Frame BackgroundColor="#DBD7D8"
+                   CornerRadius="10"
+                       Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding HelpCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0"
+                           Grid.RowSpan="2"
+                           
+                               Source="iconCall.png"
+                               HeightRequest="10"
+                               WidthRequest="10">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding HelpCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Text="HELP"
+                           TextColor="#eb532a"/>
+                        <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="If you are in trouble tap this button"
+                               FontSize="10"/>
+
+                    </Grid>
+                </Frame>
+                <!--CAUTIOUS-->
+                <Frame BackgroundColor="#DBD7D8"
+                   CornerRadius="10"
+                 
+                       Padding="10"
+                      >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CautiousCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0"
+                           Grid.RowSpan="2"
+                           
+                               Source="iconCautious.png"
+                               HeightRequest="10"
+                               WidthRequest="10">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CautiousCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Column="1"
+                           
+                           Grid.Row="0"
+                           Text="CAUTIOUS"
+                           TextColor="#eb532a"/>
+                        <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="If you tap help button and still cautious tap this button"
+                               FontSize="10"/>
+
+                    </Grid>
+                </Frame>
+                <!--SAFE-->
+                <Frame BackgroundColor="#DBD7D8"
+                   CornerRadius="10"
+                       Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SafeCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0"
+                           Grid.RowSpan="2"
+                           
+                               Source="iconSafe.png"
+                               HeightRequest="15"
+                               WidthRequest="15">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SafeCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Text="SAFE"
+                           TextColor="#eb532a"/>
+                        <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="If you are not in trouble tap this button"
+                               FontSize="10"/>
+
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

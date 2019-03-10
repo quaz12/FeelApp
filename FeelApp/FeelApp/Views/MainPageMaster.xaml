@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.MainPageMaster"
+              BackgroundColor="White"
+             Title="Master"
+             
+             >
+    <StackLayout BackgroundColor="White">
+        <ListView x:Name="MenuItemsListView"
+            
+              HasUnevenRows="true"
+                  SeparatorColor="Black"
+                  SeparatorVisibility="Default"  
+                  ItemTapped="MenuItemsListView_ItemTapped"
+              ItemsSource="{Binding MasterItemsList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10"
+                                     Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFit"
+                                   HeightRequest="30"
+                                   WidthRequest="30"/>
+                            <Label VerticalOptions="FillAndExpand" 
+                                VerticalTextAlignment="Center" 
+                                Text="{Binding Text}" 
+                                TextColor="Black"
+                                FontSize="Default"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FeelApp.Custom"
+             x:Class="FeelApp.Views.NotificationPage"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <StackLayout Orientation="Horizontal"
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Image Source="iconBack.png" 
+                           HeightRequest="45"
+                           WidthRequest="45"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="NOTIFICATIONS"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"                           
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Medium"/>
+                    <Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>
+                </StackLayout>
+
+
+
+            </Frame>
+           
+            <StackLayout Padding="10">
+                <Label Text="Send Notifications"/>
+                <local:CustomEditor VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                FontFamily="Montserrat"                            
+                                BackgroundColor="White"
+                                 HeightRequest="200"
+                                            Text="{Binding Message}"/>
+                <Button HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#EB532A"
+                        TextColor="White"
+                        IsVisible="{Binding IsSend}"
+                        Text="Send Notifications"
+                    VerticalOptions="CenterAndExpand"
+                    Command="{Binding SendCommand}"/>
+                <Button HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#EB532A"
+                        TextColor="White"
+                        Text="Save"
+                        IsVisible="{Binding IsAdd}"
+                    VerticalOptions="CenterAndExpand"
+                    Command="{Binding SaveCommand}"/>
+            </StackLayout>
+                        
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

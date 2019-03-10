@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FeelApp.Helpers"
+             x:Class="FeelApp.ViewModel.OfflineMap"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <StackLayout Orientation="Horizontal"
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Image Source="iconBack.png" 
+                           HeightRequest="45"
+                           WidthRequest="45"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="OFFLINE FLOORPLAN"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand"         
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <!--<Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>-->
+                </StackLayout>
+
+
+
+            </Frame>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Picker x:Name="picker" SelectedIndexChanged="item"
+                        Title="Select Floor Image"
+                        />
+                <local:PinchToZoomContainer x:Name="img" 
+                   VerticalOptions="FillAndExpand"
+                                          
+                   HorizontalOptions="FillAndExpand">
+                  
+                </local:PinchToZoomContainer>
+                   
+                        
+            </StackLayout>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

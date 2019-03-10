@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esriUI="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
+			 xmlns:local="clr-namespace:FeelApp;assembly=FeelApp"
+           BackgroundColor="White"
+             x:Class="FeelApp.MapPage">
+
+	<StackLayout>
+        <Label x:Name="x"/>
+        <Label x:Name="y"/>
+        <esriUI:MapView HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+            x:Name="MainMapView"
+                        >
+            
+            <!--Map="{Binding MainMap}">
+            <esriUI:MapView.InteractionOptions>
+                <esriUI:MapView.InteractionOptions IsZoomEnabled = "false"/>
+            </esriUI:MapView.InteractionOptions>-->
+        </esriUI:MapView>
+
+        <!--<Button Text="Turn on Location"
+              Clicked="TurnOnLocation"/>
+        <Slider x:Name="MySlider" Minimum="0" Maximum="180" Value="0" ValueChanged="Rotate" WidthRequest="300"/>-->
+
+       
+    </StackLayout>
+</ContentPage>

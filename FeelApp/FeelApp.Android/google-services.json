@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "31947760276",
+    "firebase_url": "https://feelapp-e0860.firebaseio.com",
+    "project_id": "feelapp-e0860",
+    "storage_bucket": "feelapp-e0860.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31947760276:android:fad4bc25851c38ea",
+        "android_client_info": {
+          "package_name": "com.company.FeelApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31947760276-7aj1j35i2q9beb5bcc17k3837g4h98mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIEFRqyhqsr9MnuoGchC-RcIvTQCDde3g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

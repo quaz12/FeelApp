@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:FeelApp.Custom;assembly=FeelApp"  
+             x:Class="FeelApp.Views.EditPage"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <StackLayout Padding="0" 
+                     BackgroundColor="White">
+                <Frame Padding="3,3,3,0"
+                   CornerRadius="0"
+                   BackgroundColor="#EB532A">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                             Padding="5"
+                             HeightRequest="45"
+                             BackgroundColor="#EB532A"
+                             VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand">
+                            <Image Source="iconBack.png" 
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Aspect="AspectFit">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="EDIT YOUR ACCOUNT"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"                                  
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="Medium"/>
+
+                            --><!--<Image Source="iconaInfo.png" 
+                                   HeightRequest="20"
+                                   WidthRequest="20"
+                                   Aspect="AspectFit"/>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DisplayAlterCommand}"/>
+                        </Image.GestureRecognizers>--><!--
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+                <StackLayout Padding="30"
+                         Spacing="30">
+                    <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image BackgroundColor="#EB532A"
+                            Source="iconUsername.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                            <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                           Placeholder="Name"
+                            Text="{Binding Name}"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image BackgroundColor="#EB532A"
+                            Source="iconContact.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                            <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Contact Number"
+                            Keyboard="Telephone"
+                            Text="{Binding Contact}"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image BackgroundColor="#EB532A"
+                            Source="iconContact.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                            <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Emergency Contact Number"
+                            Keyboard="Telephone"
+                            Text="{Binding Emergency}"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button BackgroundColor="#EB532A"
+                    CornerRadius="10"
+                    TextColor="White"
+                    Text="UPDATE"
+                        Command="{Binding EditAccountCommand}"/>
+                </StackLayout>
+
+
+
+
+            </StackLayout>
+        </StackLayout>-->
+        <StackLayout Padding="0" 
+                     BackgroundColor="White">
+            <Frame Padding="3,3,3,0"
+                   CornerRadius="0"
+                   BackgroundColor="#EB532A">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                             Padding="5"
+                             HeightRequest="45"
+                             BackgroundColor="#EB532A"
+                             VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand">
+                        <Image Source="iconBack.png" 
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="EDIT YOUR ACCOUNT"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand" 
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="Small"/>
+
+                        <!--<Image Source="iconaInfo.png" 
+                                   HeightRequest="20"
+                                   WidthRequest="20"
+                                   Aspect="AspectFit"/>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DisplayAlterCommand}"/>
+                        </Image.GestureRecognizers>-->
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+            </Frame>
+            <StackLayout Padding="30"
+                         Spacing="30">
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconUsername.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                           Placeholder="Name"
+                            Text="{Binding Name}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconEmail.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                           Placeholder="Email"
+                            Keyboard="Email"
+                            Text="{Binding Email}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconPassword.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                           Placeholder="Password"
+                            IsPassword="True"
+                            Text="{Binding Password}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconPassword.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                           Placeholder="Confirm Password"
+                            IsPassword="True"
+                            Text="{Binding ConfirmPassword}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconContact.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Contact Number"
+                            Keyboard="Telephone"
+                            Text="{Binding Contact}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       OutlineColor="#EB532A"                
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image BackgroundColor="#EB532A"
+                            Source="iconContact.png"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            WidthRequest="30"/>
+                        <local:CustomEntry 
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Emergency Contact Number"
+                            Keyboard="Telephone"
+                            Text="{Binding Emergency}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Button BackgroundColor="#EB532A"
+                    CornerRadius="10"
+                    TextColor="White"
+                    Text="UPDATE"
+                        Command="{Binding EditAccountCommand}"/>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

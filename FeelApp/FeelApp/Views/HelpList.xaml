@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.HelpList"
+              BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--App Bar-->
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <Grid 
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
+                    <Image Source="iconBack.png" 
+                           Grid.Column="0"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="StartAndExpand"       
+                           HeightRequest="45"
+                           WidthRequest="45"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Grid.Column="1"
+                           Text="{Binding Title}"
+                    
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"                          
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <!--<Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>-->
+                </Grid>
+
+
+
+            </Frame>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         Spacing="10">
+                <Grid Margin="5" Padding="0"  VerticalOptions="StartAndExpand"
+                      HorizontalOptions="FillAndExpand"
+                      >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           Margin="0"
+                           
+                           Text="Name"
+                           TextColor="#EB532A"
+                           FontSize="Small"
+                             HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Column="2" Grid.Row="0" Margin="0"
+                           Text="Location"
+                            TextColor="#EB532A"
+                           FontSize="Small"
+                            HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"/>
+                    <!--<Label Grid.Column="2"
+                           Text="Call"
+                            TextColor="#EB532A"
+                           FontSize="Large"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>-->
+                </Grid>
+
+                <ListView ItemsSource="{Binding HelpList}"
+                          x:Name="lvHelp"
+                      
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid HorizontalOptions="FillAndExpand"
+                                      VerticalOptions="FillAndExpand"
+                                      Padding="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0"
+                                           Text="{Binding Name}"
+                                           HorizontalTextAlignment="Start"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"/>
+
+
+                                    <Label Grid.Column="2"
+                                           Text="{Binding Location}" HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Start"/>
+
+                                    
+                                    <Image Grid.Column="3"
+                                           Source="iconCall.png"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"
+                                           IsVisible="{Binding IsSafe}"
+                                           HeightRequest="30"
+                                           WidthRequest="30">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding  Path=BindingContext.CallCommand , Source={x:Reference lvHelp}}"
+                                                                 CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    <Image Grid.Column="4"
+                                           Source="iconFloorPlan.png"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           IsVisible="{Binding IsSafe}"
+                                           HeightRequest="40"
+                                           WidthRequest="40">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding  Path=BindingContext.MapCommand , Source={x:Reference lvHelp}}"
+                                                                 CommandParameter="{Binding .}" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                </Grid>
+                                   
+                                
+                               
+                            </ViewCell>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </StackLayout>
+          
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

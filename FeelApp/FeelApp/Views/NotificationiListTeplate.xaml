@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.NotificationiListTeplate"
+              BackgroundColor="White"
+             x:Name="notifView">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <!--App Bar-->
+                <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                    <StackLayout Orientation="Horizontal"
+                     Padding="5,5,3,5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                        <Image Source="iconBack.png" 
+                           HeightRequest="45"
+                           WidthRequest="45"
+                           Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="SEND NOTIFICATION"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand"                           
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+
+                        <Button BackgroundColor="#EB532A"
+                                WidthRequest="45"
+                                CornerRadius="25"
+                                BorderColor="White"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                Padding="0"
+                                Text="+"
+                                TextColor="White"
+                               HorizontalOptions="EndAndExpand"  
+                                Command="{Binding AddCommand}"/>
+                        <!--<Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>-->
+                    </StackLayout>
+
+
+
+                </Frame>
+                <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                  
+                        <!--<Label 
+                           Text="Notification"
+                           TextColor="#EB532A"
+                           FontSize="Large"
+                             HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>-->
+                        <!--<Label Grid.Column="1"
+                           Text="Location"
+                            TextColor="#EB532A"
+                           FontSize="Large"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>-->
+                    
+
+                    <ListView ItemsSource="{Binding NotificationList}"
+                          x:Name="lvHelp"
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                              ItemTapped="MenuItemsListView_ItemTapped"
+                              HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Clicked="Delete" Text="Delete" IsDestructive="True" />
+                                        
+                                    </ViewCell.ContextActions>
+                                    <StackLayout Padding="10">
+
+
+                                        <Label Grid.Column="0"
+                                           Text="{Binding Notification}"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="StartAndExpand"/>
+
+
+                                      
+
+                                        <!--<Image Grid.Column="2"
+                                           Source="iconCall.png"
+                                           IsVisible="{Binding IsSafe}"
+                                           HeightRequest="20"
+                                           WidthRequest="20">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding  Path=BindingContext.CallCommand , Source={x:Reference lvHelp}}"
+                                                                 CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>-->
+
+
+                                    </StackLayout>
+
+
+
+                                </ViewCell>
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

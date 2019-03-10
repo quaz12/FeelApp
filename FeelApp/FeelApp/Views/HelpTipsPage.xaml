@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="FeelApp.Views.HelpTipsPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="White">
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <Grid
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="iconBack.png" Grid.Column="0"
+                           HeightRequest="45"
+                           WidthRequest="45"
+                             VerticalOptions="Center"
+                           HorizontalOptions="Start"       
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="HELP TIPS" Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand"       
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Medium"/>
+                    <!--<Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command}"/>
+                    </Image.GestureRecognizers>-->
+                </Grid>
+
+
+
+            </Frame>
+            <cv:CarouselViewControl HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    ShowIndicators="True"
+                                    BackgroundColor="White"
+                                    IndicatorsTintColor="Gray"
+                                    CurrentPageIndicatorTintColor="#EB532A"
+                                    ItemsSource="{Binding HelpTipsList}">
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="20"
+                                     Spacing="10">
+                            <Image Source="{Binding Image}" 
+                                 HeightRequest="300"
+                                    HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="StartAndExpand"
+                                   Aspect="AspectFit"/>
+                            <Label Text="{Binding Tip}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="EndAndExpand"
+                                   TextColor="Black"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+                   
+            </cv:CarouselViewControl>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
