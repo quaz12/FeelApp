@@ -34,18 +34,35 @@ namespace FeelApp.ViewModel
                 {
                     if (Password == ConfirmPassword)
                     {
-                        if(Settings.SaveUserType == 1)
+                        if(Settings.SaveUserType == 1 )
                         {
-                            var response = await Api.CreateAdmin(Name, Email, Password, Contact, Emergency);
-                            if (response.success)
+                            if(Globals.CreateRescuer)
                             {
-                                await this.Page.DisplayAlert("Success", "Successfully registered account", "Ok");
-                                await this.Page.Navigation.PopAsync();
+                                var response = await Api.CreateRescuer(Name, Email, Password, Contact, Emergency);
+                                if (response.success)
+                                {
+                                    await this.Page.DisplayAlert("Success", "Successfully registered account", "Ok");
+                                    await this.Page.Navigation.PopAsync();
+                                }
+                                else
+                                {
+                                    await this.Page.DisplayAlert("Error", response.message, "Ok");
+                                }
                             }
                             else
                             {
-                                await this.Page.DisplayAlert("Error", response.message, "Ok");
+                                var response = await Api.CreateAdmin(Name, Email, Password, Contact, Emergency);
+                                if (response.success)
+                                {
+                                    await this.Page.DisplayAlert("Success", "Successfully registered account", "Ok");
+                                    await this.Page.Navigation.PopAsync();
+                                }
+                                else
+                                {
+                                    await this.Page.DisplayAlert("Error", response.message, "Ok");
+                                }
                             }
+                           
                         }
                         else
                         {

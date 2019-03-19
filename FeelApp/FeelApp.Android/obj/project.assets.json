@@ -2915,11 +2915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.Android\\FeelApp.Android.csproj",
+      "projectUniqueName": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.Android\\FeelApp.Android.csproj",
       "projectName": "FeelApp.Android",
-      "projectPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.Android\\FeelApp.Android.csproj",
+      "projectPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.Android\\FeelApp.Android.csproj",
       "packagesPath": "C:\\Users\\pit\\.nuget\\packages\\",
-      "outputPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.Android\\obj\\",
+      "outputPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2938,8 +2938,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj": {
-              "projectPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj"
+            "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj": {
+              "projectPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj"
             }
           }
         }

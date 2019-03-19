@@ -960,11 +960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj",
+      "projectUniqueName": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj",
       "projectName": "FeelApp",
-      "projectPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj",
+      "projectPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj",
       "packagesPath": "C:\\Users\\pit\\.nuget\\packages\\",
-      "outputPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\obj\\",
+      "outputPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

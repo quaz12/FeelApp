@@ -118,7 +118,7 @@
                     </Grid>
                 </Frame>
                 <!--CAUTIOUS-->
-                <Frame BackgroundColor="#DBD7D8"
+                <!--<Frame BackgroundColor="#DBD7D8"
                    CornerRadius="10"
                  
                        Padding="10"
@@ -156,7 +156,7 @@
                                FontSize="10"/>
 
                     </Grid>
-                </Frame>
+                </Frame>-->
                 <!--SAFE-->
                 <Frame BackgroundColor="#DBD7D8"
                    CornerRadius="10"

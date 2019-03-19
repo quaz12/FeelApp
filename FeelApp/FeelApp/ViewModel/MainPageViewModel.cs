@@ -153,7 +153,7 @@ namespace FeelApp.ViewModel
         private void InitList()
         {
             var list = new ObservableCollection<MasterItems>();
-            if (Globals.UserID == 1)
+            if (Globals.UserType == 1)
             {
               //Admin
                 list.Add(new MasterItems { Id = 0, Text = "CALL FOR HELP", Image = "iconCall.png" });
@@ -162,16 +162,26 @@ namespace FeelApp.ViewModel
                 list.Add(new MasterItems { Id = 6, Text = "HELP TIPS", Image = "iconTips.png" });
                 list.Add(new MasterItems { Id = 7, Text = "NOTIFICATIONS", Image = "iconNotification.png" });
                 list.Add(new MasterItems { Id = 2, Text = "ADMINISTRATORS", Image = "iconAdmin.png" });
-                //list.Add(new MasterItems { Id = 9, Text = "ADD ADMIN", Image = "iconAdmin.png" });
+                list.Add(new MasterItems { Id = 9, Text = "ADD RESCUER", Image = "iconAdmin.png" });
                 list.Add(new MasterItems { Id = 3, Text = "USERS", Image = "iconUsers.png" });
                 list.Add(new MasterItems { Id = 4, Text = "EDIT ACCOUNT", Image = "iconEdit.png" });
                
                 list.Add(new MasterItems { Id = 5, Text = "LOG OUT", Image = "iconLogOut.png" });
                
             }
-            else
+            if(Globals.UserType == 2)
             {
                 //list.Add(new MasterItems { Id = 1, Text = "SCAN QR CODE", Image = "iconFloorPlan.png" });
+                list.Add(new MasterItems { Id = 8, Text = "OFFLINE FLOOR PLAN", Image = "iconFloorPlan.png" });
+                list.Add(new MasterItems { Id = 6, Text = "HELP TIPS", Image = "iconTips.png" });
+                list.Add(new MasterItems { Id = 7, Text = "NOTIFICATIONS", Image = "iconNotification.png" });
+                list.Add(new MasterItems { Id = 2, Text = "ADMINISTRATORS", Image = "iconAdmin.png" });
+                list.Add(new MasterItems { Id = 4, Text = "EDIT ACCOUNT", Image = "iconEdit.png" });
+                list.Add(new MasterItems { Id = 5, Text = "LOG OUT", Image = "iconLogOut.png" });
+            }
+            if(Globals.UserType == 3)
+            {
+                //Rescuer
                 list.Add(new MasterItems { Id = 8, Text = "OFFLINE FLOOR PLAN", Image = "iconFloorPlan.png" });
                 list.Add(new MasterItems { Id = 6, Text = "HELP TIPS", Image = "iconTips.png" });
                 list.Add(new MasterItems { Id = 7, Text = "NOTIFICATIONS", Image = "iconNotification.png" });
@@ -266,6 +276,7 @@ namespace FeelApp.ViewModel
                     break;
                 case 2://AdministratorPage
                     Globals.ListType = 1;
+                    Globals.CreateRescuer = false;
                     var adminPage = new AdministratorPage();
                  
                     await MainPage.DetailPage.Navigation.PushAsync(adminPage, true);
@@ -308,6 +319,7 @@ namespace FeelApp.ViewModel
                     break;
                 case 9://FloorPlan
                     var createAccountPage = new CreateAccountPage();
+                    Globals.CreateRescuer = true;
                     ShowHideMenu();
                     await MainPage.DetailPage.Navigation.PushAsync(createAccountPage, true);
                     break;

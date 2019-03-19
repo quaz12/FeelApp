@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeelApp.Views.RescuerMainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0">
+            <!--App Bar-->
+            <Frame Padding="3"
+               BackgroundColor="#EB532A"
+               HasShadow="True"
+               CornerRadius="0">
+
+                <StackLayout Orientation="Horizontal"
+                     Padding="5"
+                     HeightRequest="45"
+                     BackgroundColor="#EB532A"            
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+                    <Image Source="iconMenu.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowHideMenuCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text=""
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"                           
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="Large"/>
+                    <Image Source="iconaInfo.png" 
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Command}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </StackLayout>
+
+
+
+            </Frame>
+            <!--Main View-->
+            <StackLayout HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   Padding="30">
+              
+
+
+                <Grid HorizontalOptions="Center"
+                  VerticalOptions="CenterAndExpand"
+                      Padding="20"
+                  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Margin="10,20,5,20"
+                        
+                       Grid.Column="0"
+                       CornerRadius="5"
+                       Padding="0,20,0,20"
+                       BackgroundColor="#DBD7D8">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HelpCommand}"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout BackgroundColor="Transparent"
+                                  HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Frame 
+                           
+                            CornerRadius="40"
+                            Padding="3"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="#EB532A">
+                                <Button HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderRadius="20"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                BackgroundColor="White"
+                                Text="{Binding Help}"
+                                Command="{Binding HelpCommand}"/>
+                            </Frame>
+                            <Image Source="iconCall.png"
+                               HeightRequest="40"
+                               WidthRequest="40"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                            <Label Text="HELP"
+                               FontSize="8"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+
+               
+                    <!--<Frame Margin="5,20,10,20"
+                       Grid.Column="1"
+                       CornerRadius="3"
+                       BackgroundColor="#DBD7D8"
+                        Padding="0,20,0,20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CautiousCommand}"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout BackgroundColor="Transparent"
+                                  HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Frame 
+                         
+                            CornerRadius="40"
+                            Padding="3"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="#EB532A">
+
+                                <Button   HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BorderRadius="20"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            BackgroundColor="White"
+                                      
+                            Text="{Binding Cautious}"
+                                      Command="{Binding CautiousCommand}"/>
+                            </Frame>
+
+                            <Image Source="iconCautious.png"
+                                HeightRequest="40"
+                               WidthRequest="40"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                            <Label Text="CAUTIOUS"
+                                FontSize="8"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>-->
+
+                    <Frame Margin="5,20,10,20"
+                       Grid.Column="2"
+                       CornerRadius="5"
+                        Padding="0,20,0,20"
+                         
+                       BackgroundColor="#DBD7D8">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SafeCommand}"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout BackgroundColor="Transparent"
+                                  HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Frame 
+                           CornerRadius="40"
+                            Padding="3"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="#EB532A">
+
+                                <Button   HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BorderRadius="20"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            BackgroundColor="White"
+                            Text="{Binding Safe}"
+                            Command="{Binding SafeCommand}"/>
+                            </Frame>
+
+                            <Image Source="iconSafe.png"
+                                HeightRequest="40"
+                               WidthRequest="40"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                            <Label Text="SAFE"
+                                FontSize="8"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

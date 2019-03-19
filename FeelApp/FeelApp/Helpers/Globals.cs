@@ -18,5 +18,6 @@ namespace FeelApp.Helpers
         public static NotificationTemplate notificationTemplate { get; set; } = new NotificationTemplate();
 
         public static int HelpAccountId { get; set; }
+        public static bool CreateRescuer { get; set; }
     }
 }

@@ -72,7 +72,7 @@
                   HeightRequest="200">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <!--<ColumnDefinition Width="*"/>-->
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Frame Margin="10,20,5,20"
@@ -153,7 +153,7 @@
                                VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
                 </Frame>-->
-                <Frame Margin="5,20,10,20"
+                <!--<Frame Margin="5,20,10,20"
                        Grid.Column="1"
                        CornerRadius="3"
                        BackgroundColor="#DBD7D8"
@@ -194,10 +194,10 @@
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
-                </Frame>
+                </Frame>-->
 
                 <Frame Margin="5,20,10,20"
-                       Grid.Column="2"
+                       Grid.Column="1"
                        CornerRadius="5"
                         Padding="0,20,0,20"
                        BackgroundColor="#DBD7D8">

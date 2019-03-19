@@ -58,6 +58,21 @@ namespace FeelApp.Helpers
 
         }
 
+        public async static Task<RegisterResponse> CreateRescuer(string name, string email, string password, string contact, string emergency)
+        {
+            var resource = $"/api/account/create?name={name}&email={email}&password={password}&contact={contact}&emergency={emergency}&userType=3";//?email={encodeEmail}&password={encodePassword}";
+            var url = $"{baseUrl}{resource}";
+
+            var client = new HttpClient();
+
+            var result = await client.PostAsync(url, null);
+            string response = await result.Content.ReadAsStringAsync();
+            var getResponse = JsonConvert.DeserializeObject<RegisterResponse>(response);
+            return getResponse;
+
+
+        }
+
         public async static Task<CallHelpResponse> GetHelpList()
         {
             var date = DateTime.Now.ToString("yyyy-MM-dd");
@@ -273,6 +288,21 @@ namespace FeelApp.Helpers
             var result = await client.PostAsync(url, null);
             string response = await result.Content.ReadAsStringAsync();
             var getResponse = JsonConvert.DeserializeObject<CoordinateResponse>(response);
+            return getResponse;
+
+
+        }
+
+        public async static Task<RegisterResponse> GoToSafe(int Id)
+        {
+            var resource = $"/api/help/safe?Id={Id}";
+            var url = $"{baseUrl}{resource}";
+
+            var client = new HttpClient();
+
+            var result = await client.PostAsync(url, null);
+            string response = await result.Content.ReadAsStringAsync();
+            var getResponse = JsonConvert.DeserializeObject<RegisterResponse>(response);
             return getResponse;
 
 

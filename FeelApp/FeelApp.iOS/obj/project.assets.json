@@ -2630,11 +2630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.iOS\\FeelApp.iOS.csproj",
+      "projectUniqueName": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.iOS\\FeelApp.iOS.csproj",
       "projectName": "FeelApp.iOS",
-      "projectPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.iOS\\FeelApp.iOS.csproj",
+      "projectPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.iOS\\FeelApp.iOS.csproj",
       "packagesPath": "C:\\Users\\pit\\.nuget\\packages\\",
-      "outputPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp.iOS\\obj\\",
+      "outputPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2653,8 +2653,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj": {
-              "projectPath": "F:\\FireDisaster2\\FeelApp\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj"
+            "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj": {
+              "projectPath": "F:\\FireDisaster3\\FeelApp\\FeelApp\\FeelApp\\FeelApp.csproj"
             }
           }
         }

@@ -27,14 +27,19 @@ namespace FeelApp.Views
                 DetailPage = new NavigationPage(new CallHelpPage());
                 Detail = DetailPage;
             }
-            else
+            if(userType == 1)
             {
                 DetailPage = new NavigationPage(new MainPageDetail());
                 Detail = DetailPage;
             }
-           
+            if (userType == 3)
+            {
+                DetailPage = new NavigationPage(new RescuerMainPage());
+                Detail = DetailPage;
+            }
+
         }
 
-      
+
     }
 }

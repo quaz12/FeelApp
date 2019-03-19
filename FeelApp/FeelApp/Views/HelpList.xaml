@@ -56,15 +56,16 @@
             <StackLayout HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand"
                          Spacing="10">
-                <Grid Margin="5" Padding="0"  VerticalOptions="StartAndExpand"
+                <Grid Margin="5" Padding="5"  VerticalOptions="StartAndExpand"
                       HorizontalOptions="FillAndExpand"
                       >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                 
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="30"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -80,7 +81,7 @@
                            VerticalTextAlignment="Center"
                            HorizontalOptions="CenterAndExpand"
                          VerticalOptions="CenterAndExpand"/>
-                    <Label Grid.Column="2" Grid.Row="0" Margin="0"
+                    <Label Grid.Column="1" Grid.Row="0" Margin="0"
                            Text="Location"
                             TextColor="#EB532A"
                            FontSize="Small"
@@ -108,9 +109,10 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="30"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0"
                                            Text="{Binding Name}"
@@ -120,14 +122,14 @@
                                            VerticalOptions="CenterAndExpand"/>
 
 
-                                    <Label Grid.Column="2"
+                                    <Label Grid.Column="1"
                                            Text="{Binding Location}" HorizontalOptions="CenterAndExpand"
                                            VerticalOptions="CenterAndExpand"
                                            HorizontalTextAlignment="Center"
                                             VerticalTextAlignment="Start"/>
 
                                     
-                                    <Image Grid.Column="3"
+                                    <Image Grid.Column="2"
                                            Source="iconCall.png"
                                            HorizontalOptions="End"
                                            VerticalOptions="Center"
@@ -139,15 +141,28 @@
                                                                  CommandParameter="{Binding .}" />
                                             </Image.GestureRecognizers>
                                         </Image>
-                                    <Image Grid.Column="4"
+                                    <Image Grid.Column="3"
                                            Source="iconFloorPlan.png"
-                                           HorizontalOptions="Start"
+                                           HorizontalOptions="End"
                                            VerticalOptions="Center"
                                            IsVisible="{Binding IsSafe}"
                                            HeightRequest="40"
                                            WidthRequest="40">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding  Path=BindingContext.MapCommand , Source={x:Reference lvHelp}}"
+                                                                 CommandParameter="{Binding .}" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Image Grid.Column="4"
+                                           Source="iconSafe.png"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"
+                                           IsVisible="{Binding IsRescuer}"
+                                           HeightRequest="30"
+                                           WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding  Path=BindingContext.SafeCommand , Source={x:Reference lvHelp}}"
                                                                  CommandParameter="{Binding .}" />
                                         </Image.GestureRecognizers>
                                     </Image>

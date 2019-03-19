@@ -240,7 +240,7 @@ namespace FeelApp
 
                     }
 
-                    //GotoLocation();
+                    GotoLocation();
                 });
                 return true;
             });
@@ -348,7 +348,7 @@ namespace FeelApp
                 //Change Color Direction
                 SimpleLineSymbol symbol = new SimpleLineSymbol()
                 {
-                    Color = Color.Green,
+                    Color = Color.Red,
                     Width = 2,
                     Style = SimpleLineSymbolStyle.Solid
                 };

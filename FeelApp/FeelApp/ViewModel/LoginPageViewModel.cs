@@ -242,6 +242,15 @@ namespace FeelApp.ViewModel
                             IsBusy = false;
                             VisibleButton = true;
                         }
+                        if(userType == 3)
+                        {
+                            var page = new MainPage(userType);
+                            Application.Current.MainPage = new NavigationPage(page);
+                            //var userPage = new CallHelpPage();
+                            //await Application.Current.MainPage.Navigation.PushAsync(userPage, true);
+                            IsBusy = false;
+                            VisibleButton = true;
+                        }
                     }
                     else
                     {
