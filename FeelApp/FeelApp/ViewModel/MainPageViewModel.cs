@@ -182,6 +182,7 @@ namespace FeelApp.ViewModel
             if(Globals.UserType == 3)
             {
                 //Rescuer
+                list.Add(new MasterItems { Id = 0, Text = "CALL FOR HELP", Image = "iconCall.png" });
                 list.Add(new MasterItems { Id = 8, Text = "OFFLINE FLOOR PLAN", Image = "iconFloorPlan.png" });
                 list.Add(new MasterItems { Id = 6, Text = "HELP TIPS", Image = "iconTips.png" });
                 list.Add(new MasterItems { Id = 7, Text = "NOTIFICATIONS", Image = "iconNotification.png" });
