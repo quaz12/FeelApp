@@ -24,10 +24,7 @@ namespace FeelApp.ViewModel
 
             _title = Globals.HelpListTitle;
             _isSafe = true;
-            if (Globals.HelpListTitle == "SAFE LIST")
-            {
-                IsSafe = false;
-            }
+          
             if(Globals.UserType==3)
             {
                 _isRescuer = true;
@@ -42,8 +39,16 @@ namespace FeelApp.ViewModel
         {
             foreach(var item in HelpList)
             {
-                if (Globals.HelpListTitle == "SAFE LIST") item.IsSafe = false;               
-                else item.IsSafe = true;
+                if (Globals.HelpListTitle == "SAFE LIST")
+                {
+                    item.IsSafe = false;
+                    item.IsRescuer = false;
+                }
+                else
+                {
+                    item.IsSafe = true;
+                    item.IsRescuer = true;
+                }
 
                 if (item.Floor == 1) item.Location = "First Floor";
                 if (item.Floor == 2) item.Location = "Second Floor";

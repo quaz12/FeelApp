@@ -13,6 +13,7 @@ namespace FeelApp.Model
         public string Emergency { get; set; }
         public int Floor { get; set; }
         public bool IsSafe { get; set; }
+        public bool IsRescuer { get; set; }
         public int HelpType { get; set; }
         public string Date { get; set; }
         public string Location { get; set; }
