@@ -57,6 +57,7 @@ F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\Notifica
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\NotificationList.xaml.g.cs
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\NotificationPage.xaml.g.cs
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\OfflineMap.xaml.g.cs
+F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\RescuerMainPage.xaml.g.cs
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\SelectFloorPage.xaml.g.cs
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\UserPage.xaml.g.cs
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\UserPageDetail.xaml.g.cs
@@ -69,5 +70,3 @@ F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\XamlC.stamp
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\FeelApp.csproj.CopyComplete
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\FeelApp.dll
 F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\FeelApp.pdb
-F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\Views\RescuerMainPage.xaml.g.cs
-F:\FireDisaster3\FeelApp\FeelApp\FeelApp\obj\Debug\netstandard2.0\FeelApp.csprojAssemblyReference.cache

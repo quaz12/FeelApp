@@ -69,7 +69,7 @@ namespace FeelApp.ViewModel
             }
             else
             {
-                await this.Page.DisplayAlert("Error", response.message, "Ok");
+                //await this.Page.DisplayAlert("Error", response.message, "Ok");
 
             }
 

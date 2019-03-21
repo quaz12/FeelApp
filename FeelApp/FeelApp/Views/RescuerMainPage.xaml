@@ -54,19 +54,21 @@
                 <Grid HorizontalOptions="Center"
                   VerticalOptions="CenterAndExpand"
                       Padding="20"
-                      WidthRequest="100"
+                      WidthRequest="200"
+                  
+                      
                       
                   >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
                     </Grid.RowDefinitions>
                     <!--<Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>-->
-                    <Frame Margin="10,20,5,20"
+                    <Frame 
                         
                        Grid.Row="0"
                        CornerRadius="5"
@@ -80,7 +82,7 @@
                             VerticalOptions="FillAndExpand">
                             <Frame 
                            
-                            CornerRadius="40"
+                            CornerRadius="80"
                             Padding="3"
                             Margin="0,0,0,20"
                             HorizontalOptions="CenterAndExpand"
@@ -88,9 +90,9 @@
                             BackgroundColor="#EB532A">
                                 <Button HorizontalOptions="Center"
                                 VerticalOptions="Center"
-                                BorderRadius="20"
-                                WidthRequest="40"
-                                HeightRequest="40"
+                                BorderRadius="40"
+                                WidthRequest="80"
+                                HeightRequest="80"
                                 BackgroundColor="White"
                                 Text="{Binding Help}"
                                 Command="{Binding HelpCommand}"/>
@@ -100,8 +102,8 @@
                                WidthRequest="40"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"/>-->
-                            <Label Text="HELP"
-                               FontSize="8"
+                            <Label Text="HELP LIST"
+                               FontSize="Medium"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
@@ -151,7 +153,7 @@
                         </StackLayout>
                     </Frame>-->
 
-                    <Frame Margin="5,20,10,20"
+                    <Frame 
                        Grid.Row="1"
                        CornerRadius="5"
                         Padding="0,20,0,20"
@@ -164,7 +166,7 @@
                                   HorizontalOptions="FillAndExpand"
                             VerticalOptions="FillAndExpand">
                             <Frame 
-                           CornerRadius="40"
+                           CornerRadius="80"
                             Padding="3"
                             Margin="0,0,0,20"
                             HorizontalOptions="CenterAndExpand"
@@ -173,9 +175,9 @@
 
                                 <Button   HorizontalOptions="CenterAndExpand"
                             VerticalOptions="CenterAndExpand"
-                            BorderRadius="20"
-                            WidthRequest="40"
-                            HeightRequest="40"
+                            BorderRadius="40"
+                            WidthRequest="80"
+                            HeightRequest="80"
                             BackgroundColor="White"
                             Text="{Binding Safe}"
                             Command="{Binding SafeCommand}"/>
@@ -186,8 +188,8 @@
                                WidthRequest="40"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"/>-->
-                            <Label Text="SAFE"
-                                FontSize="8"
+                            <Label Text="SAFE LIST"
+                                FontSize="Medium"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
